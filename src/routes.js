@@ -8,7 +8,7 @@ export default function Routes() {
       <Route>
         <Switch>
           <Route exact path="/login">
-            <Login></Login>
+            <Login />
           </Route>
         </Switch>
       </Route>
