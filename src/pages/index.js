@@ -1,4 +1,5 @@
 import Login from "./login";
 import Signin from "./signin";
+import Panel from "./panel";
 
-export { Login, Signin };
+export { Login, Signin, Panel };
