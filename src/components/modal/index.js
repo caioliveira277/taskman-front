@@ -10,8 +10,8 @@ export default function Modal({ title, children, maxWidth }) {
   const HandlerClickCloseButton = () => {
     const animation = TweenMax.to(modal.current, {
       duration: 0.25,
-      y: "-5vh",
-      opacity: 0,
+      y: "-20vh",
+      opacity: 0.1,
     });
     animation.eventCallback("onComplete", () => {
       toggleDispatch({ type: "CLOSE_MODAL" });
