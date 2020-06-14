@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { LabelInput, Button } from "../../components";
 import { Content, ContainerModified as Container } from "./styles";
 
-export default function Signin() {
+export default function Signin(props) {
   return (
     <Container maxWidth="585px">
       <Content>
