@@ -1,10 +1,18 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Container, LabelInput, Button } from "../../components";
-import { Content } from "./styles";
+import { Container, LabelInput, Button, Mask, Modal } from "../../components";
+import { Content, FormModal } from "./styles";
 
 export default function Login() {
   const backgroundImage = `${process.env.PUBLIC_URL}/assets/images/ilustracao-login-curvas.svg`;
+  const toggleModal = useSelector((state) => state.Toggles.modal);
+  const modalDispatch = useDispatch();
+
+  const HandlerClickForgotPassword = (e) => {
+    e.preventDefault();
+    modalDispatch({ type: "OPEN_MODAL" });
+  };
   return (
     <Container
       maxWidth="515px"
@@ -34,9 +42,36 @@ export default function Login() {
           />
           <Button type="submit">Entrar</Button>
         </form>
-        <a href="/" className="modalLink">
+        <a href="/" className="modalLink" onClick={HandlerClickForgotPassword}>
           Esqueceu sua senha?
         </a>
+        {toggleModal === "OPEN" ? (
+          <Mask>
+            <Modal maxWidth="800px" title="Recuperação de senha:">
+              <FormModal>
+                <figure>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/ilustracao-recuperacao-senha.svg`}
+                    alt="Recuperação através do e-mail"
+                  />
+                </figure>
+                <div>
+                  <p>
+                    Informe o seu <b>e-mail</b> abaixo para que possamos te
+                    ajudar a<b> recuperar</b> sua <b>senha</b>
+                  </p>
+                  <LabelInput
+                    id="e-mail-recuperacao"
+                    name="email"
+                    placeholder="E-mail cadastrado"
+                    type="text"
+                  />
+                  <Button type="submit">Enviar</Button>
+                </div>
+              </FormModal>
+            </Modal>
+          </Mask>
+        ) : null}
       </Content>
     </Container>
   );

@@ -34,3 +34,29 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const FormModal = styled.form`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @media screen and (max-width: 758px) {
+    justify-content: center !important;
+  }
+  figure img {
+    width: 100%;
+  }
+  div {
+    width: 325px;
+    @media screen and (max-width: 758px) {
+      margin-top: 28px;
+    }
+    p {
+      margin-bottom: 14px;
+      font: normal 20px "Roboto", sans-serif;
+    }
+    button {
+      margin: 40px 0 0 auto;
+    }
+  }
+`;
