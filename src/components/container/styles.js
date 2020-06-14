@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  background: ${(props) => props.theme.BackgroundColor}
-    url(${(props) => props.backgroundImage || "none"})
-    ${(props) => props.bgPosition} no-repeat;
+  background-color: ${(props) => props.theme.BackgroundColor};
   width: 100%;
   max-width: ${(props) => props.maxWidth};
   box-shadow: ${(props) => props.theme.BoxShadow1},
