@@ -1,7 +1,15 @@
 import React from "react";
 import { LabelComponent } from "./styles";
 
-function LabelInput({ title, type = "text", name, id, placeholder, width }) {
+function LabelInput({
+  title,
+  type = "text",
+  name,
+  id,
+  placeholder,
+  width,
+  focus = false,
+}) {
   return (
     <LabelComponent htmlFor={id}>
       {title}
@@ -12,6 +20,7 @@ function LabelInput({ title, type = "text", name, id, placeholder, width }) {
         placeholder={placeholder}
         width={width}
         autoComplete="on"
+        autoFocus={focus}
       />
     </LabelComponent>
   );
