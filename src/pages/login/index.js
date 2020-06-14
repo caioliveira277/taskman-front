@@ -1,22 +1,27 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { LabelInput, Button, Mask, Modal } from "../../components";
 import { ContainerModified as Container, Content, FormModal } from "./styles";
 
 export default function Login() {
   const toggleModal = useSelector((state) => state.Toggles.modal);
   const modalDispatch = useDispatch();
+  const history = useHistory();
 
   const HandlerClickForgotPassword = (e) => {
     e.preventDefault();
     modalDispatch({ type: "OPEN_MODAL" });
   };
+  const HandlerSubmitLogin = (event) => {
+    event.preventDefault();
+    history.push("/painel");
+  };
   return (
     <Container maxWidth="515px">
       <Content>
         <Link to="/cadastro">Não tem cadastro?</Link>
-        <form>
+        <form onSubmit={HandlerSubmitLogin}>
           <figure title="Taskman">
             <img
               src={`${process.env.PUBLIC_URL}/assets/images/ilustracao-relogio-login.png`}
