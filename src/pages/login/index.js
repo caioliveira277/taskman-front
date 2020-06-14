@@ -1,11 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Container, LabelInput, Button, Mask, Modal } from "../../components";
-import { Content, FormModal } from "./styles";
+import { LabelInput, Button, Mask, Modal } from "../../components";
+import { ContainerModified as Container, Content, FormModal } from "./styles";
 
 export default function Login() {
-  const backgroundImage = `${process.env.PUBLIC_URL}/assets/images/ilustracao-login-curvas.svg`;
   const toggleModal = useSelector((state) => state.Toggles.modal);
   const modalDispatch = useDispatch();
 
@@ -14,15 +13,11 @@ export default function Login() {
     modalDispatch({ type: "OPEN_MODAL" });
   };
   return (
-    <Container
-      maxWidth="515px"
-      backgroundImage={backgroundImage}
-      bgPosition="right"
-    >
+    <Container maxWidth="515px">
       <Content>
         <Link to="/cadastro">Não tem cadastro?</Link>
         <form>
-          <figure>
+          <figure title="Taskman">
             <img
               src={`${process.env.PUBLIC_URL}/assets/images/ilustracao-relogio-login.png`}
               alt="Ilustracao de um relógio"

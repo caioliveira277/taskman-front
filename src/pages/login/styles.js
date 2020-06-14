@@ -1,5 +1,10 @@
 import styled from "styled-components";
+import Container from "../../components/container/styles";
 
+export const ContainerModified = styled(Container)`
+  background: url(${process.env.PUBLIC_URL}/assets/images/ilustracao-login-curvas.svg)
+    right no-repeat;
+`;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
