@@ -5,6 +5,9 @@ import { Button } from "./button";
 import Mask from "./mask";
 import Modal from "./modal";
 import Transition from "./transition";
+import { SidebarProfile, SidebarTimer } from "./sidebars";
+import { PlayButton, PauseButton, StopButton } from "./timeControllers";
+import Task from "./task";
 
 export {
   neomorphic,
@@ -15,4 +18,10 @@ export {
   Mask,
   Modal,
   Transition,
+  SidebarProfile,
+  SidebarTimer,
+  PlayButton,
+  PauseButton,
+  StopButton,
+  Task,
 };
