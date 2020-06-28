@@ -17,6 +17,8 @@ export default function Transition({ children }) {
         duration: 0.9,
         x: "100vw",
         ease: Back.easeIn,
+      }).eventCallback("onComplete", () => {
+        transition.current.remove();
       });
     });
   }, []);
