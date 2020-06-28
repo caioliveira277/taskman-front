@@ -1,5 +1,11 @@
 import React from "react";
+import { SidebarProfile, SidebarTimer } from "../../components";
 
 export default function Panel() {
-  return <h1>teste</h1>;
+  return (
+    <>
+      <SidebarProfile />
+      <SidebarTimer />
+    </>
+  );
 }
