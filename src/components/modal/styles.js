@@ -36,7 +36,7 @@ export const CloseButton = styled.button`
     span {
       ::after,
       ::before {
-        background: #de7f5f;
+        background: ${(props) => props.theme.ColorVariant1};
       }
     }
   }
@@ -49,7 +49,7 @@ export const CloseButton = styled.button`
       width: 45px;
       height: 3px;
       border-radius: 20px;
-      background: #ee8b6a;
+      background: ${(props) => props.theme.ColorVariant2};
     }
     ::before {
       transform: rotate(45deg) translate(3px, 1px);
