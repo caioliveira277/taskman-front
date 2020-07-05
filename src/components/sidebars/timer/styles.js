@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import Container from "../../container/styles";
 
-export const ContainerModified = styled(Container)``;
+export const ContainerModified = styled(Container)`
+  min-height: 960px;
+`;
 
 export const Content = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 95vh;
   .arrow-icon {
     align-self: flex-end;
     color: #c4c4c4;
@@ -26,7 +27,7 @@ export const Content = styled.div`
   .currentTarget {
     margin-top: 50px;
     width: 100%;
-    div {
+    & > :first-child {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -34,6 +35,14 @@ export const Content = styled.div`
         color: #4d4d4d;
         font: normal 28px "Roboto", sans-serif;
         margin-bottom: 24px;
+      }
+    }
+    & > :last-child {
+      transition: all 200ms ease;
+      box-shadow: none;
+      &:hover {
+        transform: scale(1.06);
+        transform-origin: bottom;
       }
     }
   }

@@ -12,7 +12,7 @@ export const TaskComponent = styled.div`
   transition: all 200ms ease;
   transform-origin: bottom;
   :hover {
-    transform: scale(1.1);
+    box-shadow: 3px 10px 10px rgba(113, 113, 113, 0.3);
   }
   .header,
   .footer {
@@ -22,11 +22,15 @@ export const TaskComponent = styled.div`
     width: 100%;
     color: #ffffff;
     h2 {
-      font: 300 16px "Roboto", sans-serif;
+      font: 300 18px "Roboto", sans-serif;
     }
     small {
-      font: 300 10px "Roboto", sans-serif;
+      font: 300 14px "Roboto", sans-serif;
     }
+  }
+  .footer {
+    flex: 1;
+    align-items: flex-end;
   }
   hr {
     border: 1px solid #efa5a5;

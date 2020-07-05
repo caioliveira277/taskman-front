@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MdHistory } from "react-icons/md";
 import { SleepIcon, Arrow, LastTime, Target } from "./ilustrations";
 import { PlayButton, PauseButton, StopButton } from "../../timeControllers";
@@ -12,11 +12,37 @@ import {
 } from "./styles";
 
 export default function SidebarTimer() {
+  const [time, setTime] = useState({
+    seconds: 0,
+    minutes: 0,
+  });
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(({ minutes, seconds }) => {
+        if (seconds < 60) {
+          seconds++;
+        } else {
+          seconds = 0;
+          if (minutes < 25) minutes++;
+          else minutes = 0;
+        }
+        return {
+          minutes: minutes,
+          seconds: seconds,
+        };
+      });
+    }, 1000);
+  }, []);
+
   return (
     <ContainerModified maxWidth="324px">
       <Content>
         <Stopwatch>
-          <span>15:34</span>
+          <span>
+            {time.minutes < 10 ? `0${time.minutes}` : time.minutes}:
+            {time.seconds < 10 ? `0${time.seconds}` : time.seconds}
+          </span>
         </Stopwatch>
         <CycloList>
           <li>

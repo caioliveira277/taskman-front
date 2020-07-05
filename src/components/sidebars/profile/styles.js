@@ -4,6 +4,7 @@ import Container from "../../container/styles";
 export const ContainerModified = styled(Container)`
   background: url(${process.env.PUBLIC_URL}/assets/images/ilustracao-painel-curvas-1.svg)
     bottom no-repeat;
+  min-height: 960px;
 `;
 
 export const Content = styled.div`
@@ -11,7 +12,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 95vh;
   figure {
     img {
       margin: 0 auto;

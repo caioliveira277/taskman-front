@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background: ${neomorphic.BackgroundColor};
+    scrollbar-width: thin;
   }
   main {
     display: flex;
