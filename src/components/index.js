@@ -1,6 +1,6 @@
 import Container from "./container";
 import { neomorphic, GlobalStyle } from "./theme";
-import { LabelInput } from "./inputs";
+import { LabelInput, LabelTextArea } from "./inputs";
 import { Button } from "./button";
 import Mask from "./mask";
 import Modal from "./modal";
@@ -24,4 +24,5 @@ export {
   PauseButton,
   StopButton,
   Task,
+  LabelTextArea,
 };

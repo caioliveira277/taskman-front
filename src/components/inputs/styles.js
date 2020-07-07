@@ -3,7 +3,8 @@ import styled from "styled-components";
 const LabelComponent = styled.label`
   font: 500 24px "Roboto", sans-serif;
   display: block;
-  input {
+  input,
+  textarea {
     font: normal 18px "Roboto", sans-serif;
     width: ${(props) => props.width || "100%"};
     border: none;

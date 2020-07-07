@@ -25,5 +25,19 @@ function LabelInput({
     </LabelComponent>
   );
 }
+function LabelTextArea({ title, name, id, placeholder, width, rows }) {
+  return (
+    <LabelComponent htmlFor={id}>
+      {title}
+      <textarea
+        rows={rows}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+        width={width}
+      ></textarea>
+    </LabelComponent>
+  );
+}
 
-export { LabelInput };
+export { LabelInput, LabelTextArea };
