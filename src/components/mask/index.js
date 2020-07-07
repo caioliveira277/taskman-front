@@ -10,6 +10,7 @@ export default function Mask({ children }) {
       duration: 0.4,
       opacity: 1,
     });
+    document.body.style.overflow = "hidden";
   }, []);
   return createPortal(
     <MaskComponent ref={mask}>{children}</MaskComponent>,

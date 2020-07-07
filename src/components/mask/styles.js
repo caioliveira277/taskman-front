@@ -12,4 +12,5 @@ export const MaskComponent = styled.section`
   align-items: center;
   padding: 0px 15px;
   opacity: 0;
+  overflow: auto;
 `;
