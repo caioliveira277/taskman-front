@@ -29,7 +29,7 @@ export const Content = styled.div`
     }
   }
   hr {
-    border: 1px solid #c8c8c8;
+    border: 1px solid #e4e4e4;
     width: 95%;
     margin: 50px 0;
   }
@@ -74,6 +74,19 @@ export const ButtonToggle = styled.button`
     :hover {
       color: ${(props) => props.theme.ColorVariant2};
     }
+    svg {
+      transition: transform 200ms ease;
+    }
+  }
+  i:not(active) {
+    svg {
+      transform: rotate(0deg);
+    }
+  }
+  i.active {
+    svg {
+      transform: rotate(-180deg);
+    }
   }
 `;
 
@@ -101,5 +114,20 @@ export const ButtonAddTask = styled.button`
   i {
     font-size: 28px;
     margin-right: 5px;
+  }
+`;
+
+export const FormModalCreateTask = styled.form`
+  div {
+    margin: 8px 8px;
+    display: flex;
+    flex-direction: column;
+    & > label :last-child {
+      margin: 22px 0;
+    }
+    button {
+      align-self: flex-end;
+      margin-top: 15px;
+    }
   }
 `;
