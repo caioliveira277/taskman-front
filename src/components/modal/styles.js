@@ -29,8 +29,8 @@ export const CloseButton = styled.button`
   border: none;
   cursor: pointer;
   background: transparent;
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
   transition: all 200ms ease;
   :hover {
     span {
@@ -46,7 +46,7 @@ export const CloseButton = styled.button`
     ::after {
       content: "";
       display: block;
-      width: 45px;
+      width: 36px;
       height: 3px;
       border-radius: 20px;
       background: ${(props) => props.theme.ColorVariant2};

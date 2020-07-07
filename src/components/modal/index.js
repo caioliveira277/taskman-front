@@ -15,6 +15,7 @@ export default function Modal({ title, children, maxWidth }) {
     });
     animation.eventCallback("onComplete", () => {
       toggleDispatch({ type: "CLOSE_MODAL" });
+      document.body.style.overflow = "auto";
     });
   };
 
