@@ -21,7 +21,7 @@ export const Content = styled.div`
   }
   hr.separator {
     width: 95%;
-    border: 1px solid #c8c8c8;
+    border: 1px solid #e4e4e4;
     margin: 50px 0;
   }
   .currentTarget {

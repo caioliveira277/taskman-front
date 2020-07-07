@@ -19,6 +19,7 @@ export default function Transition({ children }) {
         ease: Back.easeIn,
       }).eventCallback("onComplete", () => {
         transition.current.remove();
+        document.body.style.overflow = "auto";
       });
     });
   }, []);

@@ -61,7 +61,7 @@ export default function Login() {
                     ajudar a<b> recuperar</b> sua <b>senha</b>
                   </p>
                   <LabelInput
-                    id="e-mail-recuperacao"
+                    id="emailRecuperacao"
                     name="email"
                     placeholder="E-mail cadastrado"
                     type="text"
