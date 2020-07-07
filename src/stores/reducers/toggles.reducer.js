@@ -4,10 +4,10 @@ export default function ToggleModal(state = INITIAL_STATE, action) {
   let State;
   switch (action.type) {
     case "OPEN_MODAL":
-      State = { ...state, modal: "OPEN" };
+      State = { ...state, target: action.target, modal: "OPEN" };
       break;
     case "CLOSE_MODAL":
-      State = { ...state, modal: "CLOSE" };
+      State = { ...state, target: action.target, modal: "CLOSE" };
       break;
     default:
       return state;
