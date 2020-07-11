@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineClockCircle } from "react-icons/ai";
 import { BsBookmarkPlus, BsBookmarkCheck } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
+import { TimelineLite, Back } from "gsap";
 import { Modal, Mask, LabelInput, LabelTextArea, Button } from "../../index";
 import {
   ContainerModified,
@@ -13,11 +14,43 @@ import {
 
 export default function SidebarProfile() {
   const toggleProfile = useRef(null);
+  const toggleIcon = useRef(null);
   const modalDispatch = useDispatch();
+  const profileContainer = useRef(null);
+  const [toggleSidebarState, setToggleSidebarState] = useState(true);
   const toggleModal = useSelector((state) => [
     state.Toggles.modal,
     state.Toggles.target,
   ]);
+  const animationTL = new TimelineLite({
+    paused: true,
+  })
+    .to(profileContainer.current, {
+      xPercent: -130,
+      duration: 1,
+      ease: Back.easeInOut,
+    })
+    .to(profileContainer.current, {
+      xPercent: 0,
+      width: 70,
+      willChange: "width",
+      duration: 1,
+    });
+  const animationTLReverse = new TimelineLite({
+    paused: true,
+    onComplete: () => setToggleSidebarState(true),
+  })
+    .to(profileContainer.current, {
+      xPercent: -130,
+      duration: 1,
+      ease: Back.easeInOut,
+    })
+    .to(profileContainer.current, {
+      xPercent: 0,
+      width: "100%",
+      willChange: "width",
+      duration: 1,
+    });
 
   const HandlerClickCreateTask = (event) => {
     event.preventDefault();
@@ -25,16 +58,20 @@ export default function SidebarProfile() {
   };
 
   const HandlerToggleSideBar = () => {
-    const { current } = toggleProfile;
-    const icon = current.firstChild;
+    toggleIcon.current.classList.toggle("active");
 
-    icon.classList.toggle("active");
+    if (toggleSidebarState) {
+      setToggleSidebarState(false);
+      animationTL.play();
+    } else {
+      animationTLReverse.play();
+    }
   };
   return (
-    <ContainerModified maxWidth="324px">
-      <Content>
+    <ContainerModified maxWidth="324px" ref={profileContainer}>
+      <Content className={toggleSidebarState ? "open" : "close"}>
         <ButtonToggle onClick={HandlerToggleSideBar} ref={toggleProfile}>
-          <i>
+          <i ref={toggleIcon}>
             <AiOutlineArrowLeft />
           </i>
         </ButtonToggle>
@@ -46,11 +83,11 @@ export default function SidebarProfile() {
           <figcaption>Jhon Smith</figcaption>
         </figure>
         <hr />
-        <ButtonAddTask onClick={HandlerClickCreateTask}>
+        <ButtonAddTask className="addTask" onClick={HandlerClickCreateTask}>
           <i>
             <BsBookmarkPlus />
           </i>
-          Nova tarefa
+          <p>Nova tarefa</p>
         </ButtonAddTask>
         <div className="resultados">
           <h2>Resultados diários</h2>

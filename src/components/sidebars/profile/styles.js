@@ -5,6 +5,38 @@ export const ContainerModified = styled(Container)`
   background: url(${process.env.PUBLIC_URL}/assets/images/ilustracao-painel-curvas-1.svg)
     bottom no-repeat;
   min-height: 960px;
+  .close {
+    h2,
+    h3,
+    figcaption,
+    p {
+      display: none;
+    }
+    button:not(addTask) {
+      align-self: center;
+      margin-bottom: 35px;
+    }
+    hr {
+      margin: 35px 0;
+    }
+    button.addTask {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      i {
+        margin-bottom: -8px;
+        margin-right: 0px;
+        margin-left: 3px;
+      }
+    }
+    .resultados i {
+      font-size: 2.3rem;
+      span {
+        display: flex;
+        flex-flow: column-reverse;
+      }
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -19,8 +51,9 @@ export const Content = styled.div`
       box-shadow: ${(props) => props.theme.BoxShadow1},
         ${(props) => props.theme.BoxShadow2};
       border-radius: 50%;
-      width: 190px;
-      height: 190px;
+      max-width: 190px;
+      width: 100%;
+      height: auto;
     }
     figcaption {
       font: normal 38px "Roboto", sans-serif;

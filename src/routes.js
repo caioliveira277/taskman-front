@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login, Signin, Panel } from "./pages/index";
 import PrivateRoute from "./auth/private.routes";
-import { Transition } from "./components";
+// import { Transition } from "./components";
 
 export default function Routes() {
   return (
@@ -16,10 +16,10 @@ export default function Routes() {
             <Signin />
           </Route>
           <PrivateRoute path="/painel">
-            <Transition>
+            {/* <Transition>
               <h1>Olá</h1>
               <h2>Bem-vindo de volta!</h2>
-            </Transition>
+            </Transition> */}
             <Panel />
           </PrivateRoute>
         </Switch>
