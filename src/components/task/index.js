@@ -1,6 +1,7 @@
 import React from "react";
 import { MdCheck, MdMenu } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import Proptypes from "react-proptypes";
 import { TaskComponent, ButtonRounded } from "./styles";
 
 export default function Task({ title, children, datetime }) {
@@ -33,3 +34,9 @@ export default function Task({ title, children, datetime }) {
     </TaskComponent>
   );
 }
+
+Task.propTypes = {
+  title: Proptypes.string,
+  children: Proptypes.oneOfType([Proptypes.element, Proptypes.string]),
+  datetime: Proptypes.string,
+};

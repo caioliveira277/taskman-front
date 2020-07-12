@@ -1,4 +1,5 @@
 import React from "react";
+import Proptypes from "react-proptypes";
 import { LabelComponent } from "./styles";
 
 function LabelInput({
@@ -39,5 +40,24 @@ function LabelTextArea({ title, name, id, placeholder, width, rows }) {
     </LabelComponent>
   );
 }
+
+LabelInput.propTypes = {
+  title: Proptypes.string,
+  type: Proptypes.string,
+  name: Proptypes.string,
+  id: Proptypes.string,
+  placeholder: Proptypes.string,
+  width: Proptypes.string,
+  focus: Proptypes.bool,
+};
+
+LabelTextArea.propTypes = {
+  title: Proptypes.string,
+  name: Proptypes.string,
+  id: Proptypes.string,
+  placeholder: Proptypes.string,
+  width: Proptypes.string,
+  rows: Proptypes.string,
+};
 
 export { LabelInput, LabelTextArea };

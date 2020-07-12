@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { TweenMax, Elastic } from "gsap";
+import Proptypes from "react-proptypes";
 import { ModalComponent, CloseButton } from "./styles";
 
 export default function Modal({ title, children, maxWidth }) {
@@ -39,3 +40,9 @@ export default function Modal({ title, children, maxWidth }) {
     </ModalComponent>
   );
 }
+
+Modal.propTypes = {
+  title: Proptypes.string,
+  children: Proptypes.element,
+  maxWidth: Proptypes.string,
+};
