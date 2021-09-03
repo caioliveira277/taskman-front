@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Container from "../../container/styles";
 
 export const ContainerModified = styled(Container)`
-  background: url(${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-painel-curvas-1.svg)
+  background: url(${process.env.PUBLIC_URL}/assets/ilustracao-painel-curvas-1.svg)
     bottom no-repeat;
   min-height: 960px;
   .close {

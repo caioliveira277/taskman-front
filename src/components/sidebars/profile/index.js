@@ -77,7 +77,7 @@ export default function SidebarProfile() {
         </ButtonToggle>
         <figure>
           <img
-            src={`${process.env.PUBLIC_URL}/./build/assets/images/perfil-padrao.png`}
+            src={`${process.env.PUBLIC_URL}/assets/perfil-padrao.png`}
             alt="Foto de perfil"
           />
           <figcaption>Jhon Smith</figcaption>
