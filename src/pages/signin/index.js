@@ -7,7 +7,7 @@ export default function Signin(props) {
   return (
     <Container maxWidth="585px">
       <Content>
-        <Link to="/login">Já tem cadastro?</Link>
+        <Link to="/">Já tem cadastro?</Link>
         <form action="">
           <h1>Cadastro:</h1>
           <LabelInput

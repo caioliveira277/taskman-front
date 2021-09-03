@@ -31,7 +31,7 @@ export default function Panel() {
     proin tempus ut amet, donec a lectus. Ornare duis in ut porttitor
     quisque et semper tincidunt netus.`;
 
-    for (let index = 0; index < 22; index++) {
+    for (let index = 0; index < 10; index++) {
       let lorems = [];
       for (
         let countLorems = 0;

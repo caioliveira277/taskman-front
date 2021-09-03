@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Login, Signin, Panel, Profile } from "./pages/index";
 import PrivateRoute from "./auth/private.routes";
 import { Transition } from "./components";
@@ -9,7 +9,7 @@ export default function Routes() {
     <Router>
       <Route>
         <Switch>
-          <Route path="/login">
+          <Route exact path="/">
             <Login />
           </Route>
           <Route path="/cadastro">
