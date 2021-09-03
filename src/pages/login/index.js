@@ -24,7 +24,7 @@ export default function Login() {
         <form onSubmit={HandlerSubmitLogin}>
           <figure title="Taskman">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/ilustracao-relogio-login.png`}
+              src={`${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-relogio-login.png`}
               alt="Ilustracao de um relógio"
             />
           </figure>
@@ -51,7 +51,7 @@ export default function Login() {
               <FormModal>
                 <figure>
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/images/ilustracao-recuperacao-senha.svg`}
+                    src={`${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-recuperacao-senha.svg`}
                     alt="Recuperação através do e-mail"
                   />
                 </figure>

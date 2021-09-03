@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Container from "../../components/container/styles";
 
 export const ContainerModified = styled(Container)`
-  background: url(${process.env.PUBLIC_URL}/assets/images/ilustracao-cadastro-curvas-1.svg)
+  background: url(${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-cadastro-curvas-1.svg)
       bottom left no-repeat,
-    url(${process.env.PUBLIC_URL}/assets/images/ilustracao-cadastro-curvas-2.svg)
+    url(${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-cadastro-curvas-2.svg)
       top right no-repeat;
 `;
 

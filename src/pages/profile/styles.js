@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Container from "../../components/container/styles";
 
 export const ContainerModified = styled(Container)`
-  background: url(${process.env.PUBLIC_URL}/assets/images/ilustracao-perfil-curvas.svg)
+  background: url(${process.env.PUBLIC_URL}/./build/assets/images/ilustracao-perfil-curvas.svg)
     top left no-repeat;
   background-size: 330px;
   padding: 35px 50px;
