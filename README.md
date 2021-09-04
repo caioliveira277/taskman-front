@@ -1,4 +1,4 @@
-# Taskman Frontend ✅
+# Taskman Frontend ☑
 ## Projeto de estudos para o desenvolvimento de uma interface criada para um sistema de ***tarefas*** com ***Pomodoro Timer***
 
 <br>
