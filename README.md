@@ -62,7 +62,7 @@ Os scripts abaixo executam a compilação do projeto.
 [<ins>GSAP Docs</ins>](https://greensock.com/gsap/)
 
 ***Documentação ReactJS e Styled Components:***<br>
-[<ins>Styled Components Docs</ins>](https://styled-components.com/)
+[<ins>Styled Components Docs</ins>](https://styled-components.com/) <br>
 [<ins>ReactJS Docs</ins>](https://pt-br.reactjs.org/tutorial/tutorial.html)
 
 ***Documentação Redux e React Router:***<br>
