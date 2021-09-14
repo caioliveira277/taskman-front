@@ -56,7 +56,7 @@ Os scripts abaixo executam a compilação do projeto.
 ---
 ## Links: 🌐
 ***Projeto online GitHub Pages:***<br>
-[<ins>Link do projeto</ins>](https://caioliveira277.github.io/taskman/#/)
+[<ins>Link do projeto</ins>](https://caioliveira277.github.io/taskman_front)
 
 ***Documentação GSAP (usado para animações):***<br>
 [<ins>GSAP Docs</ins>](https://greensock.com/gsap/)
